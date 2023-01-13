@@ -1,0 +1,21 @@
+{
+    "name": "minimal_frontend_2022",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "tailwindcss": "^3.2.4"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.26",
+        "@types/react-dom": "^18.0.10",
+        "autoprefixer": "^10.4.13",
+        "postcss": "^8.4.21",
+        "sass": "^1.57.1",
+        "vite": "^4.0.4"
+    }
+}
