@@ -1,6 +1,20 @@
 import React from 'react'
+import { Api } from './Api'
+import { useQuery } from 'react-query'
 
 function App() {
+    const postId = '123'
+    const { data: post } = useQuery<Api.Post>(['post', postId], () =>
+        Api.getPostById(postId)
+    )
+    const { data: user } = useQuery<Api.User>(
+        ['user', post?.authorId],
+        () => Api.getUserById(post?.authorId || ''),
+        { enabled: !!post?.id }
+    )
+
+    console.log(postId, post, user)
+
     return (
         <div>
             <h2 className="text-xl">Hallo aus der App</h2>
